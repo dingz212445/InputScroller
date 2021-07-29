@@ -33,19 +33,16 @@ import QtQuick.VirtualKeyboard 2.1
 Item {
 
     property var innerFlickable
-    property var outerFlickable
     property var inputItem: InputContext.priv.inputItem
 
     onInputItemChanged: {
         console.debug("onInputItemChanged")
         innerFlickable = null
-        outerFlickable = null
         if (inputItem !== null) {
             var parent_ = inputItem.parent
             while (parent_) {
                 if (parent_.maximumFlickVelocity) {
                     if (innerFlickable) {
-                        outerFlickable = parent_
                         break
                     } else {
                         innerFlickable = parent_
@@ -56,7 +53,6 @@ Item {
             delayedLoading.restart()
         }
         console.debug("innerFlic: ", innerFlickable)
-        console.debug("outerFlic: ", outerFlickable)
     }
 
     function ensureVisible(flickable) {
@@ -102,8 +98,9 @@ Item {
         id: delayedLoading
         interval: 10
         onTriggered: {
-            ensureVisible(innerFlickable)
-            ensureVisible(outerFlickable)
+            console.debug("ensure inner visible: ")
+            if(innerFlickable)
+                ensureVisible(innerFlickable)
         }
     }
     Connections {
