@@ -65,7 +65,7 @@ Item {
 
             if (verticallyFlickable) {
                 var scrollMarginVertical = (flickable && flickable.scrollMarginVertical) ? flickable.scrollMarginVertical : 10
-                if (flickable.contentY < cursorRectangle.y  - scrollMarginVertical || flickable.contentY > cursorRectangle.y + scrollMarginVertical){
+                if (flickable.contentY < cursorRectangle.y  - scrollMarginVertical || flickable.contentY > cursorRectangle.y){
                     flickable.contentY = cursorRectangle.y  - scrollMarginVertical
                 }
             }

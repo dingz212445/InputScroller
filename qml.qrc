@@ -2,8 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Basic.qml</file>
-        <file>content/TextField.qml</file>
-        <file>content/TextArea.qml</file>
         <file>content/AutoScroller.qml</file>
     </qresource>
 </RCC>

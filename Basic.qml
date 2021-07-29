@@ -26,11 +26,9 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-
 import QtQuick 2.10
 import QtQuick.Controls 2.3
 import QtQuick.VirtualKeyboard 2.1
-import "content"
 
 Rectangle {
     width: 1280
@@ -72,7 +70,6 @@ Rectangle {
                 TextField {
                     width: parent.width
                     placeholderText: "One line field"
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: passwordField.focus = true
                 }
                 TextField {
@@ -81,7 +78,6 @@ Rectangle {
                     echoMode: TextInput.Password
                     placeholderText: "Password field"
                     inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhPreferLowercase | Qt.ImhSensitiveData | Qt.ImhNoPredictiveText
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: upperCaseField.focus = true
                 }
                 TextField {
@@ -89,7 +85,6 @@ Rectangle {
                     width: parent.width
                     placeholderText: "Upper case field"
                     inputMethodHints: Qt.ImhUppercaseOnly
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: lowerCaseField.focus = true
                 }
                 TextField {
@@ -97,7 +92,6 @@ Rectangle {
                     width: parent.width
                     placeholderText: "Lower case field"
                     inputMethodHints: Qt.ImhLowercaseOnly
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: phoneNumberField.focus = true
                 }
                 TextField {
@@ -106,7 +100,6 @@ Rectangle {
                     width: parent.width
                     placeholderText: "Phone number field"
                     inputMethodHints: Qt.ImhDialableCharactersOnly
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: formattedNumberField.focus = true
                 }
                 TextField {
@@ -114,7 +107,6 @@ Rectangle {
                     width: parent.width
                     placeholderText: "Formatted number field"
                     inputMethodHints: Qt.ImhFormattedNumbersOnly
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: digitsField.focus = true
                 }
                 TextField {
@@ -122,7 +114,6 @@ Rectangle {
                     width: parent.width
                     placeholderText: "Digits only field"
                     inputMethodHints: Qt.ImhDigitsOnly
-                    enterKeyAction: EnterKeyAction.Next
                     onAccepted: textArea.focus = true
                 }
                 TextArea {
