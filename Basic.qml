@@ -35,14 +35,14 @@ import "content"
 Rectangle {
     width: 1280
     height: 720
-    color: "#F6F6F6"
+    color: "red"
 
     Flickable {
         id: flickable
         anchors.fill: parent
         contentWidth: content.width
         contentHeight: content.height
-        interactive: false // inputPanel.active // contentHeight > height
+        interactive: false
         flickableDirection: Flickable.VerticalFlick
 
         property real scrollMarginVertical: 20
