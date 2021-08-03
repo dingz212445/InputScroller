@@ -8,8 +8,8 @@ import "content"
 
 Window {
     id: window
-    width: 1000
-    height: 600
+    width: 1280
+    height: 800
     visible: true
     title: qsTr("Hello World")
 

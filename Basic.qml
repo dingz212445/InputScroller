@@ -43,8 +43,6 @@ Rectangle {
         interactive: false
         flickableDirection: Flickable.VerticalFlick
 
-        ScrollBar.vertical: ScrollBar {}
-
         Column {
             id: textEditors
             spacing: 15
